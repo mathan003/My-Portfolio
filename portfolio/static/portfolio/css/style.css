@@ -211,14 +211,14 @@ nav a:hover{
     color:var(--muted)
 }
 .tag.one{
-    right:2%;
+    right:-2%;
     bottom:25%;
     background:var(--green);
     color:white
 }
 .tag.two{
     left:10%;
-    bottom:13%;
+    bottom:10%;
     background:var(--yellow)
 }
 .ticker{
