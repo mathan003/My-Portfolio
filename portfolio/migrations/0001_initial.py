@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('category', models.CharField(default='Web Development', max_length=120)),
                 ('description', models.TextField()),
                 ('tech_stack', models.CharField(help_text='Example: Django, Python, HTML, CSS', max_length=250)),
-                ('image', models.ImageField(blank=True, null=True, upload_to='projects/')),
+                ('image', models.FileField(blank=True, null=True, upload_to='projects/')),
                 ('live_url', models.URLField(blank=True)),
                 ('github_url', models.URLField(blank=True)),
                 ('order', models.PositiveIntegerField(default=0)),
@@ -49,7 +49,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=120)),
                 ('short_description', models.TextField()),
-                ('icon', models.CharField(default='✦', max_length=8)),
+                ('icon', models.CharField(default='UI', max_length=8)),
                 ('order', models.PositiveIntegerField(default=0)),
             ],
             options={

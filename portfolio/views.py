@@ -1,11 +1,13 @@
 from django.contrib import messages
 from django.shortcuts import redirect, render
+
 from .forms import ContactForm
 from .models import Project, Service, Skill
 
+
 DEFAULT_SERVICES = [
-    {'icon': '⌘', 'title': 'Frontend Development', 'short_description': 'Responsive, interactive interfaces using HTML, CSS, JavaScript and React.'},
-    {'icon': '⚙', 'title': 'Backend Development', 'short_description': 'Secure Django backends, database design, authentication and admin dashboards.'},
+    {'icon': 'UI', 'title': 'Frontend Development', 'short_description': 'Responsive, interactive interfaces using HTML, CSS, JavaScript and React.'},
+    {'icon': 'BE', 'title': 'Backend Development', 'short_description': 'Secure Django backends, database design, authentication and admin dashboards.'},
     {'icon': 'API', 'title': 'API Development', 'short_description': 'REST APIs for web and mobile applications with clean, scalable architecture.'},
 ]
 DEFAULT_SKILLS = [
@@ -21,6 +23,7 @@ DEFAULT_PROJECTS = [
     {'title': 'Employee Management System', 'category': 'Django Admin', 'description': 'Employee data management website with records, forms and an easy administration workflow.', 'tech_stack': 'Python, Django, SQLite'},
     {'title': 'Food Selling Website', 'category': 'Full-stack Website', 'description': 'A clean online food catalog interface for browsing products and placing orders.', 'tech_stack': 'HTML, CSS, JavaScript, Django'},
 ]
+
 
 def home(request):
     if request.method == 'POST':
