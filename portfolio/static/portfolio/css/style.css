@@ -212,13 +212,13 @@ nav a:hover{
 }
 .tag.one{
     right:-2%;
-    bottom:25%;
+    bottom:11%;
     background:var(--green);
     color:white
 }
 .tag.two{
     left:10%;
-    bottom:10%;
+    bottom:2%;
     background:var(--yellow)
 }
 .ticker{
