@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mathan M | Web Developer</title>
-  {% load static %}
-<link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
 </head>
 <body>
   <header class="nav-wrap">
@@ -46,7 +45,16 @@
 
     <section class="section" id="skills">
       <p class="eyebrow center">- MY FAVORITE TOOLS</p><h2 class="center"><em>Exploring the Tools</em><br>Behind My Development</h2>
-      <div class="skill-grid">{% for skill in skills %}<div class="skill"><div class="meter" style="--p:{{ skill.percentage }}"><span>{{ skill.percentage }}%</span></div><strong>{{ skill.name }}</strong></div>{% endfor %}</div>
+      <div class="skill-grid">
+        {% for skill in skills %}
+        <div class="skill">
+          <div class="meter" style="--p: {{ skill.percentage }}%;">
+            <span>{{ skill.percentage }}%</span>
+          </div>
+          <strong>{{ skill.name }}</strong>
+        </div>
+        {% endfor %}
+      </div>
     </section>
 
     <section class="section projects" id="projects">
@@ -60,7 +68,7 @@
 
     <section class="section journey" id="journey"><p class="eyebrow center">- EDUCATION & WORK</p><h2 class="center">My <em>Academic and</em><br>Professional Journey</h2><div class="journey-grid"><div class="timeline"><h3>Education</h3><div><small>2021 - 2024</small><b>Computer Science / Web Development</b><p>Built foundation in programming, databases and web technologies.</p></div><div><small>Continuous Learning</small><b>Python, Django & React</b><p>Learning through projects, practice and deployment.</p></div></div><div class="timeline"><h3>Work Experience</h3><div><small>Portfolio Projects</small><b>Freelance-style Development</b><p>Created e-commerce, car buying and employee-management projects.</p></div><div><small>Current Focus</small><b>Full-stack Web Developer</b><p>Creating reliable frontend interfaces and Django backends.</p></div></div></div></section>
 
-    <section class="contact section" id="contact"><div><p class="eyebrow">- CONTACT US</p><h2>Let's Talk for <em>Your<br>Next Projects</em></h2><p>Have an idea for a website, dashboard or API? Send a message and I will get back to you.</p><ul><li>Phone: +91 93840 98304</li><li>Email: mathan003m@gmail.com</li><li>Location: Madurai, Tamil Nadu, India</li></ul></div><form method="post">{% csrf_token %}<div class="form-grid"><label>Your Name*{{ form.name }}</label><label>Email*{{ form.email }}</label><label>Phone*{{ form.phone }}</label><label>Interested In*{{ form.interest }}</label></div><label>Your Message*{{ form.message }}</label><button class="btn" type="submit">Submit Message &rarr;</button></form></section>
+    <section class="contact section" id="contact"><div><p class="eyebrow">- CONTACT US</p><h2>Let's Talk for <em>Your<br>Next Projects</em></h2><p>Have an idea for a website, dashboard or API? Send a message and I will get back to you.</p><ul><li>Phone: +91 93840 98304</li><li>Email: mathan003m@gmail.com</li><li>Location: Tenkasi, Tamil Nadu, India</li></ul></div><form method="post">{% csrf_token %}<div class="form-grid"><label>Your Name*{{ form.name }}</label><label>Email*{{ form.email }}</label><label>Phone*{{ form.phone }}</label><label>Interested In*{{ form.interest }}</label></div><label>Your Message*{{ form.message }}</label><button class="btn" type="submit">Submit Message &rarr;</button></form></section>
     <section class="about section full" id="about">
       <div class="about-art"><div class="orbit"></div><img class="img small" src="{% static 'portfolio/images/1718.png' %}" alt="Mathan M portrait"><span class="bubble b1">Python</span><span class="bubble b2">Django</span><span class="bubble b3">SQL</span><span class="bubble b4">API</span></div>
       <div>
