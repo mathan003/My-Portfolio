@@ -2,7 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'replace-this-secret-key-before-production'
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = [
     "my-portfolio-eta-olive-60.vercel.app",
     "localhost",
