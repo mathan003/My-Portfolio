@@ -1,10 +1,10 @@
 from pathlib import Path
-
+import os
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = 'replace-this-secret-key-before-production'
-DEBUG = True
+SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key')  
+DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 ALLOWED_HOSTS = [
-    "my-portfolio-eight-omega-36.vercel.app",
+    "my-portfolio-eta-olive-60.vercel.app",
     "localhost",
     "127.0.0.1",
 ]
@@ -53,8 +53,9 @@ TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'portfolio' / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
